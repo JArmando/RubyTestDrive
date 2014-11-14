@@ -4,18 +4,20 @@ class Post
 		@content = content
 	end
 
-	def Author
-		@Author
+	def author
+		@author
 	end
-	def Content
-		@Content
+	def content
+		@content
 	end
-	def Tags
-		@Tags
+	def tags
+		@tags
 	end
 
 	def tags=(tags)
 		@tags = tags
 	end
 	
+
+
 end
