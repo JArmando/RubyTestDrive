@@ -4,20 +4,10 @@ class Post
 		@content = content
 	end
 
-	def author
-		@author
-	end
-	def content
-		@content
-	end
-	def tags
-		@tags
-	end
+	attr_reader :author, :content, :tags
 
 	def tags=(tags)
 		@tags = tags
 	end
 	
-
-
 end
