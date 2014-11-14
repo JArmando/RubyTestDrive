@@ -1,20 +1,22 @@
 require_relative "../BlogApp/Models/post"
+require_relative '../BlogApp/Controllers/PostController'
+
 require "test/unit"
 
-class TestPostReader < Test::Unit::TestCase
-	def testPostClass
-		@testPost = Post.new('Pablo', 'Batida se mato')
+class Test_post_reader < Test::Unit::TestCase
+	def test_post_class
+		@test_post = Post.new('Pablo', 'Batida se mato')
 
-		assert_instance_of(Post, @testPost, "Should be able to create a new Post")
+		assert_instance_of(Post, Post.new('Pablo', 'Batida se mato'), "Should be able to create a new Post")
 		
-		assert_equal('Pablo', @testPost.author, "Should be able to create a new Post with the given Author name")
+		assert_equal('Pablo', @test_post.author, "Should be able to create a new Post with the given Author name")
 		
-		@testPost.tags = 'batida, pablo, muerte'
-		assert_equal('batida, pablo, muerte', @testPost.tags, "Should be able to set tags to a post")
+		@test_post.tags = 'batida, pablo, muerte'
+		assert_equal('batida, pablo, muerte', @test_post.tags, "Should be able to set tags to a post")
 
 	end
 
-	def testPostController
+	def test_post_controller
 		assert_instance_of(PostController, PostController.instance, "PostController should contain an instance of itself")
 	end
 
