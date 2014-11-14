@@ -1,8 +1,7 @@
 class Post
-	def initialize(author, content, tags)
-		@Author = author
-		@Content = content
-		@Tags = tags
+	def initialize(author, content)
+		@author = author
+		@content = content
 	end
 
 	def Author
@@ -15,4 +14,8 @@ class Post
 		@Tags
 	end
 
+	def tags=(tags)
+		@tags = tags
+	end
+	
 end
