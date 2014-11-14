@@ -14,4 +14,8 @@ class TestPostReader < Test::Unit::TestCase
 
 	end
 
+	def testPostController
+		assert_instance_of(PostController, PostController.instance, "PostController should contain an instance of itself")
+	end
+
 end
