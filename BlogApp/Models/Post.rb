@@ -1,13 +1,10 @@
 class Post
-	def initialize(author, content)
+	def initialize(author, title, description)
 		@author = author
-		@content = content
+		@description = description
 	end
 
-	attr_reader :author, :content, :tags
+	attr_reader :author
+	attr_accessor :tags, :title, :description, :id
 
-	def tags=(tags)
-		@tags = tags
-	end
-	
 end
