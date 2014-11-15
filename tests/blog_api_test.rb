@@ -3,8 +3,6 @@ require 'sinatra'
 require 'test/unit'
 require 'rack/test'
 
-
-
 class TestBlogApi < Test::Unit::TestCase
 	include Rack::Test::Methods
 
