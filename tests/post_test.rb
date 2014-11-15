@@ -6,14 +6,14 @@ require 'rack/test'
 
 class TestPost < Test::Unit::TestCase
 	def test_post_class
-		@test_post = Post.new('Pablo', 'Batida se mato')
-
-		assert_instance_of(Post, Post.new('Pablo', 'Batida se mato'), "Should be able to create a new Post")
+		@test_post = Post.new('Pablo', 'Batida se mato', 'blah blah blah')
+		##### Existance tests
+		assert_instance_of(Post, Post.new('Pablo', 'Batida se mato', 'blah blah blah'), "Should be able to create a new Post")
 		
 		assert_equal('Pablo', @test_post.author, "Should be able to create a new Post with the given Author name")
 		
 		@test_post.tags = ['batida', 'pablo', 'muerte']
-		assert_equal('batida, pablo, muerte', @test_post.tags, "Should be able to set tags to a post")
+		assert_equal(['batida', 'pablo', 'muerte'], @test_post.tags, "Should be able to set tags to a post")
 
 	end
 end
