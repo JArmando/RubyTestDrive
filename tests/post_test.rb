@@ -1,8 +1,8 @@
 require_relative "../BlogApp/Models/post"
-require_relative '../BlogApp/Controllers/PostController'
+
 
 require 'test/unit'
-require 'rack/test'
+
 
 class TestPost < Test::Unit::TestCase
 	def test_post_class
@@ -14,6 +14,14 @@ class TestPost < Test::Unit::TestCase
 		
 		@test_post.tags = ['batida', 'pablo', 'muerte']
 		assert_equal(['batida', 'pablo', 'muerte'], @test_post.tags, "Should be able to set tags to a post")
+		#### End of Existance tests
+
+		##### Internal methods tests
+		assert_instance_of(Hash, @test_post.to_hash, "A Post should be able to transform themself into hashes")
+		assert_equal('Pablo', @test_post.to_hash['author'], "A Post should be parsed to hash correctly")
+
+
+		#### End of Internal method tests
 
 	end
 end
