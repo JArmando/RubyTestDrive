@@ -3,7 +3,11 @@ require_relative './Helpers/post_reader'
 require 'sinatra'
 require 'json'
 
-get '/post' do
+get '/' do
+  send_file 'Public/index.html'
+end
+
+get '/api/post' do
   content_type :json
   posts = get_posts
   posts.find_all { 
@@ -14,7 +18,7 @@ get '/post' do
     }.map { |post| post.to_hash }.to_json
 end
 
-get '/post/:id' do
+get '/api/post/:id' do
   content_type :json
   posts = get_posts
   post = posts.find { |x| x.id == params[:id] }
@@ -22,5 +26,5 @@ get '/post/:id' do
 end
 
 def get_posts
-  PostReader.new().get_posts_from_file('..\..\posts.json')
+  PostReader.new().get_posts_from_file('..\posts.json')
 end
