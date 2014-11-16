@@ -6,8 +6,12 @@ require 'minitest/autorun'
 describe 'The Great Blog Application' do
 	include Rack::Test::Methods
 
-pixalator_post = '{"id":"1","author":"Pixelator","title":"My first post","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..","tags":["cooking"," sports"]}'
-pixelated_posts = '[{"id":"2","author":"Pixelated","title":"Your second post","description":"Morbi est sem, lacinia sit amet justo quis, maximus ullamcorper elit. Praesent in dolor nec sem rhoncus tincidunt nec egestas est.","tags":["fitness"," recreation"]},{"id":"3","author":"Pixelated","title":"Your third post","description":"Praesent in dolor nec sem rhoncus tincidunt nec egestas est.","tags":["fitness"]}]'
+pixalator_post = '{"id":"1","author":"Pixelator","title":"My first post","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..","tags":["cooking","sports"]}'
+pixelated_posts = '[{"id":"2","author":"Pixelated","title":"Your second post","description":"Morbi est sem, lacinia sit amet justo quis, maximus ullamcorper elit. Praesent in dolor nec sem rhoncus tincidunt nec egestas est.","tags":["fitness","recreation"]},{"id":"3","author":"Pixelated","title":"Your third post","description":"Praesent in dolor nec sem rhoncus tincidunt nec egestas est.","tags":["fitness"]}]'
+pixalator_posts = '[{"id":"1","author":"Pixelator","title":"My first post","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..","tags":["cooking","sports"]}]'
+
+fitness_posts = '[{"id":"2","author":"Pixelated","title":"Your second post","description":"Morbi est sem, lacinia sit amet justo quis, maximus ullamcorper elit. Praesent in dolor nec sem rhoncus tincidunt nec egestas est.","tags":["fitness","recreation"]},{"id":"3","author":"Pixelated","title":"Your third post","description":"Praesent in dolor nec sem rhoncus tincidunt nec egestas est.","tags":["fitness"]}]'
+sports_posts = '[{"id":"1","author":"Pixelator","title":"My first post","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..","tags":["cooking","sports"]}]'
 
 
 	def app
