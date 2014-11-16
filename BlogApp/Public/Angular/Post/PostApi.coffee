@@ -1,4 +1,4 @@
 blogApp.factory 'PostApi',
 ['$resource', ($resource) ->
-  $resource '/api/post', {},
+  $resource '/api/post/:id'
 ]

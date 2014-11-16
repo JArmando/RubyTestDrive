@@ -1,6 +1,6 @@
 blogApp.controller 'PostController', 
-['$scope', 
-($scope) -> 
+['$scope','PostApi' 
+($scope, postApi) -> 
+  $scope.posts = postApi.query()
 
-  
 ]
