@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="/vendor/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/angular/app.js"></script>
+    <script type="text/javascript" src="/angular/post/postapi.js"></script>
+    <script type="text/javascript" src="/angular/post/postctrl.js"></script>
+    <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css"></link>
+  
+  </head>
+  <body>
+    <div ng-app="blogApp">
+      <div class="container" ng-controller="PostController">
+        <h1>Welcome to my first ruby app ever!</h1>
+        <div ng-repeat="post in posts">
+            <h3>{{post.title}}</h3>
+            <h5>By {{post.author}}</h5>
+            <p>{{post.description}}</p>
+            <ul>
+              <li class="btn btn-default" ng-repeat="tag in post.tags">{{tag}}</li>
+            </ul>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
