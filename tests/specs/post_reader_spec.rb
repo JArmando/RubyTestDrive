@@ -7,7 +7,7 @@ require 'minitest/autorun'
 describe 'Post Reader' do
 	include Rack::Test::Methods
 
-	json_post = '{"id":"1","author":"Pixelator","title":"My first post","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..","tags":["cooking"," sports"]}'
+	json_post = '{"id":"1","author":"Pixelator","title":"My first post","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..","tags":["cooking","sports"]}'
 
 	it "works..." do
 		PostReader.new().get_posts_from_file('..\..\posts.json')[0].must_be_instance_of Post
