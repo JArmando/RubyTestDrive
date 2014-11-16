@@ -18,7 +18,7 @@ get '/post/:id' do
   content_type :json
   posts = get_posts
   post = posts.find { |x| x.id == params[:id] }
-  post.to_hash.to_json
+  post.to_hash.to_json if post
 end
 
 def get_posts

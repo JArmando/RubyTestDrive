@@ -18,8 +18,6 @@ sports_posts = '[{"id":"1","author":"Pixelator","title":"My first post","descrip
     Sinatra::Application
   end
 
-
-
   it "Works..." do
     get '/post'
     last_response.status.must_equal 200
@@ -28,6 +26,11 @@ sports_posts = '[{"id":"1","author":"Pixelator","title":"My first post","descrip
   it "Can find a post by id" do
     get '/post/1'
     last_response.body.must_equal pixalator_post
+  end
+
+  it "Doesn't crash when it can't find a post by id" do
+    get '/post/-1'
+    last_response.status.must_equal 200
   end
 
   it "Can find posts by author" do
