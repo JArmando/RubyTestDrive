@@ -6,7 +6,12 @@ require 'json'
 get '/post' do
 	content_type :json
 	posts = get_posts
-	posts.map { |post| post.to_hash }.to_json
+	posts.find_all { 
+		|post| (
+		  (!params['author'] || post.author == params['author']) && 
+		  (!params['tag'] || post.tags.find { |tag| tag == params['tag'] } )
+		) 
+		}.map { |post| post.to_hash }.to_json
 end
 
 get '/post/:id' do

@@ -31,6 +31,17 @@ sports_posts = '[{"id":"1","author":"Pixelator","title":"My first post","descrip
 	it "Can find posts by author" do
 		get '/post?author=Pixelated'
 		last_response.body.must_equal pixelated_posts
+		
+		get '/post?author=Pixelator'
+		last_response.body.must_equal pixalator_posts
+	end
+
+	it "Can find posts by Tag" do
+		get '/post?tag=fitness'
+		last_response.body.must_equal fitness_posts
+
+		get '/post?tag=sports'
+		last_response.body.must_equal sports_posts
 	end
 
 end
