@@ -25,6 +25,13 @@ get '/api/post/:id' do
   post.to_hash.to_json if post
 end
 
+get '/api/tag' do
+  content_type :json
+  count = Hash.new
+  get_posts.map { |post| post.tags.map { |tag| if !count[tag] then count[tag] = 1 else count[tag] = count[tag] + 1 end } }
+  count.to_json
+end
+
 def get_posts
-  PostReader.new().get_posts_from_file('..\posts.json')
+  PostReader.new().get_posts_from_file('..\..\posts.json')
 end

@@ -49,4 +49,15 @@ sports_posts = '[{"id":"1","author":"Pixelator","title":"My first post","descrip
     last_response.body.must_equal sports_posts
   end
 
+  it "Has an endpoint for tags" do
+    get '/api/tag'
+    last_response.status.must_equal 200
+  end
+
+  it "gets tags and their frequency" do
+    get '/api/tag'
+    last_response.body.must_equal '{"cooking":1,"sports":1,"fitness":2,"recreation":1}'
+  end
+
+
 end
