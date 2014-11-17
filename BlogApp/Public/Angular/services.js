@@ -4,3 +4,9 @@ blogApp.factory('PostApi', [
     return $resource('/api/post/:id');
   }
 ]);
+
+blogApp.factory('TagApi', [
+  '$resource', function($resource) {
+    return $resource('/api/tag');
+  }
+]);
