@@ -1,0 +1,26 @@
+{
+  "name": "rubytestdrive",
+  "version": "1.0.0",
+  "description": "This layer should mostly serve as a front, it will (most likely) interact\r with other (internal, more specific) services as features and specs grow.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/MobiusLab/rubytestdrive.git"
+  },
+  "author": "Mobius",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "grunt": "^0.4.5"
+  },
+  "dependencies": {
+    "bower": "^1.3.12",
+    "grunt-bower": "^0.16.0"
+  }
+}
