@@ -1,0 +1,5 @@
+node_modules/
+bower_components/
+BlogApp/Public/scripts/vendor/
+BlogApp/Public/css/bootstrap/
+BlogApp/Public/fonts/
