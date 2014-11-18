@@ -21,36 +21,55 @@ this [repository](https://bitbucket.org/MobiusLab/rubytestdrive) and follow my l
 
 - Run these statements on the console to get **javascript** dependencies:
     
-    cd {path/to/clone/directory}
+    ```
+    $cd {path/to/clone/directory}
+    ```
+    
+    ```
+    $npm install
+    ```
+    
+    ```
+    $bower install
+    ```
 
-    npm install
-
-    bower install
-
-    grunt
-
+    ```
+    $grunt
+    ```
 - Run these statements on the console to get **Ruby** ***gems*** dependencies:
     
-    cd {path/to/clone/directory}
+    ```
+    $cd {path/to/clone/directory}
+    ```
 
-    gem install bundler
+    ```
+    $gem install bundler
+    ```
 
-    bundle install    
-
+    ```
+    $bundle install    
+    ```
 ## Running the app ##
 - Run these statements on the console to run the app:
     
-    cd {path/to/clone/directory}/BlogApp
+    ```
+    $cd {path/to/clone/directory}/BlogApp
+    ```
 
-    ruby blog_api.rb
+    ```
+    $ruby blog_api.rb
+    ```
 
 After this you should be able to open the site at your [localhost](localhost:4567)
 
 ## Running the tests ##
 
 The tests are located at:
+
     /tests/specs
 
 In order to run then simply open the console and run the following statements:
-    cd {path/to/clone/directory}/tests/specs/
-    ruby {test file name}.rb
+    
+    $cd {path/to/clone/directory}/tests/specs/
+    
+    $ruby {test file name}.rb
