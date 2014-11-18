@@ -1,7 +1,7 @@
 # Ruby Test Drive #
 ## BlogApp ##
 ### Description ###
-This project is my first attempt at programming using **Ruby**. With it I managed create an app that can read from a **Json** file and parse its content to emulate a Post which gets served through an **API**
+This project is my first attempt ever at programming using **Ruby** *AND* **Sinatra**. I managed create an app that can read from a **Json** file and parse its content to emulate a Post which gets served through an **API**
 
 
 ### Technologies used ###
@@ -20,7 +20,7 @@ You'll need [NodeJS.](http://nodejs.org) With it at hand you only need to clone
 this [repository](https://bitbucket.org/MobiusLab/rubytestdrive) and follow my lead:
 
 - Open a console and get to:
-    cd path/to/clone/directory
+    cd {path/to/clone/directory}
 
 - Run these statements on the console to get **javascript** dependencies:
     
@@ -35,3 +35,11 @@ this [repository](https://bitbucket.org/MobiusLab/rubytestdrive) and follow my l
     gem install bundler
 
     bundle install    
+## Runing the tests ##
+
+The tests are located at:
+    /tests/specs
+
+In order to run then simply open the console and run the following statements:
+    cd {path/to/clone/directory}/tests/specs/
+    ruby {test file name}.rb
