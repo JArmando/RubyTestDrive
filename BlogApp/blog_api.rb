@@ -37,5 +37,5 @@ get '/api/tag' do
 end
 
 def get_posts
-  PostReader.new().get_posts_from_file('..\posts.json')
+  PostReader.new().get_posts_from_file( File.file?('..\posts.json') ? '..\posts.json' : '..\..\posts.json')
 end
