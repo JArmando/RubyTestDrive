@@ -17,10 +17,12 @@ This project is my first attempt at programming using **Ruby**. With it I manage
 ## Getting  Started ##
 ### (Preparing) The Code ###
 You'll need [NodeJS.](http://nodejs.org) With it at hand you only need to clone
-this [repository](https://bitbucket.org/MobiusLab/rubytestdrive) and follow my lead and run these statements on the console:
+this [repository](https://bitbucket.org/MobiusLab/rubytestdrive) and follow my lead:
 
+- Open a console and get to:
     cd path/to/clone/directory
-### For javascript dependencies ###
+
+- Run these statements on the console to get **javascript** dependencies:
     
     npm install
 
@@ -28,7 +30,8 @@ this [repository](https://bitbucket.org/MobiusLab/rubytestdrive) and follow my l
 
     grunt
 
-### For gems dependencies ###
+- Run these statements on the console to get **Ruby** ***gems*** dependencies:
+
     gem install bundler
 
     bundle install    
